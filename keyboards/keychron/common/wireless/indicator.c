@@ -546,7 +546,8 @@ void indicator_battery_low(void) {
 }
 
 void indicator_task(void) {
-    bat_level_animiation_task();
+    // TODO(jesse): this is not defined anywhere...?
+    // bat_level_animiation_task();
     if (indicator_config.value && timer_elapsed32(indicator_timer_buffer) >= next_period) {
         indicator_timer_cb((void *)&type);
         indicator_timer_buffer = timer_read32();
